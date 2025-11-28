@@ -307,12 +307,34 @@ Tu peux lancer :
 ./vendor/bin/pint
 ```
 
+### Fichier de config `pint.json` (optionnel mais conseillé)
+
+Crée un fichier `pint.json` à la racine du projet :
+
+```json
+{
+  "preset": "laravel",
+  "rules": {
+    "ordered_imports": true,
+    "concat_space": {
+      "spacing": "one"
+    }
+  }
+}
+```
+
 Et ajouter dans `composer.json` :
 
 ```json
 "scripts": {
   "pint": "pint"
 }
+```
+
+Lancer : 
+
+```bash
+composer pint
 ```
 
 ## 6.2. Tests de base
